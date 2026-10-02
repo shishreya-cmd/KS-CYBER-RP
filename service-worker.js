@@ -1,4 +1,4 @@
-const CACHE = "ks-cyber-rp-v2";
+const CACHE = "ks-cyber-rp-v3";
 
 const ASSETS = [
   "./",
@@ -6,7 +6,7 @@ const ASSETS = [
   "./style.css",
   "./app.js",
   "./curriculum.js",
-  "./manifest.json",
+  "./manifest.webmanifest",
   "./icons/ks-cyber-rp-192.png",
   "./icons/ks-cyber-rp-512.png",
   "./icons/favicon-64.png",

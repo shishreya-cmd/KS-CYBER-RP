@@ -4,16 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#07111f">
+
 <link rel="manifest" href="manifest.webmanifest">
-    <link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180.png">
+<link rel="icon" type="image/png" sizes="64x64" href="icons/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180.png">
+
 <title>KS CYBER RP</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
 <div id="app">
+
   <aside class="sidebar">
-    <div class="brand"><div class="logo">KS</div><div><strong>KS CYBER RP</strong><small>168-DAY COMMAND CENTER</small></div></div>
+
+    <div class="brand">
+      <div class="logo">KS</div>
+      <div>
+        <strong>KS CYBER RP</strong>
+        <small>168-DAY COMMAND CENTER</small>
+      </div>
+    </div>
+
     <nav>
       <button data-view="today" class="nav active">⌂ <span>Today</span></button>
       <button data-view="roadmap" class="nav">◫ <span>Roadmap</span></button>
@@ -23,32 +37,63 @@
       <button data-view="reviews" class="nav">↻ <span>Review</span></button>
       <button data-view="settings" class="nav">⚙ <span>Settings</span></button>
     </nav>
+
     <div class="side-foot">OFFLINE-FIRST • LOCAL DATA</div>
+
   </aside>
 
   <main class="main">
+
     <header class="topbar">
+
       <button id="menuBtn" class="icon-btn">☰</button>
+
       <div>
         <div class="eyebrow">PERSONAL SECURITY LEARNING OS</div>
         <h1 id="pageTitle">Today</h1>
       </div>
+
       <div class="top-actions">
         <input id="searchBox" placeholder="Search days, topics, notes…" />
         <button id="exportBtn" class="btn ghost">Export</button>
       </div>
+
     </header>
+
     <section id="content"></section>
+
   </main>
+
 </div>
 
 <div id="modal" class="modal hidden">
+
   <div class="modal-card">
+
     <button id="modalClose" class="modal-close">×</button>
+
     <div id="modalBody"></div>
+
   </div>
+
 </div>
+
 <script src="curriculum.js"></script>
 <script src="app.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("./service-worker.js")
+      .then(function (registration) {
+        console.log("Service Worker registered:", registration.scope);
+      })
+      .catch(function (error) {
+        console.error("Service Worker registration failed:", error);
+      });
+  });
+}
+</script>
+
 </body>
 </html>

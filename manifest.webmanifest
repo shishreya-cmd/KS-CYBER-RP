@@ -1,0 +1,23 @@
+{
+  "name": "KS CYBER RP",
+  "short_name": "KS CYBER RP",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#06101d",
+  "theme_color": "#07111f",
+  "description": "Personal 168-day cybersecurity learning command center",
+  "icons": [
+    {
+      "src": "./icons/ks-cyber-rp-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/ks-cyber-rp-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
